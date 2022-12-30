@@ -22,18 +22,16 @@ public class StudentService {
         studentRepository.addTeacher(teacher);
     }
 
-    void addStudentTeacherPair(String student,String teacher){
+    void addStudentTeacherPair(String teacher,String student){
         studentRepository.addStudentTeacherPair(student,teacher);
     }
 
     Student getStudentByName(String name){
-        Student s = studentRepository.getStudentByName(name);
-        return s;
+       return studentRepository.getStudentByName(name);
     }
 
     Teacher getTeacherByName(String name){
-        Teacher t = studentRepository.getTeacherByName(name);
-        return t;
+        return studentRepository.getTeacherByName(name);
     }
 
     public List<String> getStudentsByTeacherName(String teacher){
