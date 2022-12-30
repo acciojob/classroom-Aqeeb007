@@ -37,13 +37,10 @@ public class StudentService {
     }
 
     public List<String> getStudentsByTeacherName(String teacher){
-        List<String> s = new ArrayList<String>();
-        s = studentRepository.getStudentsByTeacherName(teacher);
-        return s;
+        return studentRepository.getStudentsByTeacherName(teacher);
     }
 
     public List<String> getAllStudents(){
-        List<String> s = new ArrayList<String>();
         return studentRepository.getAllStudents();
     }
 

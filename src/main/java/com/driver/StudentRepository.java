@@ -43,17 +43,11 @@ public class StudentRepository {
     }
 
     Student getStudentByName(String name){
-        if(!studentHashMap.containsKey(name)){
-            return null;
-        }
         Student s = studentHashMap.get(name);
         return s;
     }
 
     Teacher getTeacherByName(String name){
-        if(!teacherHashMap.containsKey(name)){
-            return null;
-        }
         Teacher t = teacherHashMap.get(name);
         return t;
     }
@@ -71,12 +65,12 @@ public class StudentRepository {
     }
 
     public void deleteTeacherByName(String teacher){
-        List<String> student = new ArrayList<>();
+        List<String> students = new ArrayList<String>();
 
         if(teacherPair.containsKey(teacher)){
-            student = teacherPair.get(teacher);
+            students = teacherPair.get(teacher);
 
-            for(String s : student){
+            for(String s : students){
                 if(studentHashMap.containsKey(s)){
                     studentHashMap.remove(s);
                 }
